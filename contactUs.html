@@ -28,18 +28,19 @@
 <!-- nav bar section -->
 <header>
     <nav>
-    <div class="topnav">
-        <a href="index.html" class="active"><img id="logo" src="images/visit-clare.jpg"></a>
-        <div id="myLinks">
-            <a href="#news">News</a>
-            <a href="contactUs.html">Contact</a>
-            <a href="#about">About</a>
+        <div class="topnav">
+            <a href="index.html" class="active"><img id="logo" src="images/visit-clare.jpg"
+                    alt="visit clare logo, return to home page"></a>
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="contactUs.html">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="menuBar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="menuBar()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-</nav>
+    </nav>
 </header>
 
 <body>
@@ -81,20 +82,17 @@
                             </div>
                             <fieldset>
                                 <legend>What are you interested in?</legend>
-                                <input type="checkbox" name="interest[]" id="interest[]" value="todo">Things To Do<br>
-                                <input type="checkbox" name="interest[]" id="interest[]" value="hiking">Hiking and
-                                Walking<br>
-                                <input type="checkbox" name="interest[]" id="interest[]" value="events">Events<br>
-                                <input type="checkbox" name="interest[]" id="interest[]" value="accommodation">Places to
-                                Stay<br>
-                                <input type="checkbox" name="interest[]" id="interest[]" value="dining">Places to
-                                Eat<br>
+                                <input type="checkbox" name="interest[]" id="interest[]" value="todo" ><label for="interest[]">Things To Do</label><br>
+                                <input type="checkbox" name="interest[]" id="interest[]" value="hiking"><label for="interest[]">Hiking and Walking</label><br>
+                                <input type="checkbox" name="interest[]" id="interest[]" value="events"><label for="interest[]">Events</label><br>
+                                <input type="checkbox" name="interest[]" id="interest[]" value="accommodation"><label for="interest[]">Places to Stay</label><br>
+                                <input type="checkbox" name="interest[]" id="interest[]" value="dining"><label for="interest[]">Places to Eat</label><br>
                             </fieldset>
                             <input type="submit">
                             <input type="reset">
                         </fieldset>
                     </form>
-                    
+
                 </div>
             </div>
             <div class=""></div>
