@@ -1,0 +1,389 @@
+/* base styles (mobile design by default) */
+/* color pallete is :   #c8c3cc beige
+                        #8ca3a3 pale blue
+                        #484f4f deep grey
+                        #563f46 dull purple*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/* class selectors */
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 0.1em;
+    grid-row-gap: 0.1em;
+    width: 100%;
+    /* this is an example of margins */
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.colGrid {
+    width: 80%;
+    grid-gap: 20px;
+    justify-content: center;
+    /* this is an example of margins */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.colGrid form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.colGrid .column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.column input,
+.column textarea,
+.column label {
+    display: block;
+    width: 100%;
+    /* this is an example of padding */
+    padding: 10px;
+    /* this is an example of a border */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* this is an example of padding */
+    padding: 10px;
+    margin: 10px;
+    grid-column: span 2;
+}
+
+
+/* compound selectors */
+.tile1,
+.tile2,
+.tile3,
+.tile4,
+.tile5,
+.tile6,
+.tile7 {
+    grid-column: span 1;
+}
+
+
+
+
+#logo {
+    width: 175px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #8ca3a3;
+    position: relative;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    font-family: 'DM Serif Display', serif;
+}
+
+.topnav a.icon {
+    background: #8ca3a3;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+.footerContainer {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.footerContainer a {
+    justify-content: center;
+    margin: 1.5em;
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* hero image */
+.hero {
+    background-image: url("../images/cliff-edge-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* compound selectors */
+.tile1 img,
+.tile2 img,
+.tile3 img,
+.tile4 img,
+.tile5 img,
+.tile6 img,
+.tile7 img {
+    height: 250px;
+    object-fit: fill;
+    align-items: center;
+}
+
+
+/* tag selectors */
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+p {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* tablet view */
+@media only screen and (min-width:768px) and (max-width:991px) {
+
+    /* grid of tablet display is to be a 8 column layout */
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(8, 12.5%);
+        width: 90%;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .topNav,
+    .topNav #myLinks {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        background-color: #8ca3a3;
+        width: 100%;
+        display: contents;
+    }
+
+    .topNav a {
+        margin: auto;
+        font-family: 'DM Serif Display', serif;
+        font-size: 1em;
+        color: black;
+        text-decoration: none;
+    }
+
+    .topnav a.icon {
+        background: #8ca3a3;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topNav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+
+    #firstParagraph {
+        grid-column: 1 / span 8;
+        grid-row: 1;
+        padding: 1em;
+    }
+
+
+    .tile1 {
+        grid-column: 1 / span 4;
+    }
+
+    .tile2 {
+        grid-column: 5 / span 4;
+    }
+
+    .tile3 {
+        grid-column: 1 / span 4;
+    }
+
+    .tile4 {
+        grid-column: 5 / span 4;
+    }
+
+    .tile5 {
+        grid-column: 1 / span 4;
+    }
+
+    .tile6 {
+        grid-column: 5 / span 4;
+    }
+
+    .tile7 {
+        grid-column: 3 / span 4;
+    }
+
+
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*Desktop view*/
+@media only screen and (min-width:992px) {
+
+    /* grid of desktop display is to be a 12 column layout */
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(12, 8.33%);
+        width: 90%;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .topNav,
+    .topNav #myLinks {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        background-color: #8ca3a3;
+        width: 100%;
+        display: contents;
+    }
+
+    .topNav a {
+        margin: auto;
+        font-family: 'DM Serif Display', serif;
+        font-size: 1em;
+        color: black;
+        text-decoration: none;
+    }
+
+    .topnav a.icon {
+        background: #8ca3a3;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+
+    #firstParagraph {
+        grid-column: 3 / span 8;
+        grid-row: 1;
+        padding: 1em;
+    }
+
+
+
+    .tile1 {
+        grid-column: 1 / span 3;
+    }
+
+    .tile2 {
+        grid-column: 4 / span 3;
+    }
+
+    .tile3 {
+        grid-column: 7 / span 3;
+    }
+
+    .tile4 {
+        grid-column: 10 / span 3;
+    }
+
+    .tile5 {
+        grid-column: 1 / span 4;
+    }
+
+    .tile6 {
+        grid-column: 5 / span 4;
+    }
+
+    .tile7 {
+        grid-column: 9 / span 4;
+    }
+
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
